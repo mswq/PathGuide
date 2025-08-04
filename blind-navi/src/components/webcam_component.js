@@ -5,7 +5,7 @@ import ObjectDetection from "./object_detection";
 // useRef -> creates a persistent reference to the webcam's video element
 // useEffect -> sets resolution when the component loads 
 
-const WebcamComponent = () => {
+const WebcamComponent = ({ setDetections, detections }) => {
     const videoRef = useRef(null);
 
     useEffect (() => {
@@ -19,7 +19,7 @@ const WebcamComponent = () => {
         <div>
             <h2> Live Camera Feed </h2>
             <Webcam ref = {videoRef}/>
-            <ObjectDetection videoRef = {videoRef} /> 
+            <ObjectDetection videoRef={videoRef} setDetections={setDetections} detections={detections}/> 
         </div>
     );
 };

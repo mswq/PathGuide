@@ -3,8 +3,7 @@ import * as tf from "@tensorflow/tfjs";
 import "@tensorflow/tfjs-backend-webgl";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 
-const ObjectDetection = ( {videoRef}) => {
-    const [detections, setDetections] = useState ([]); // storesa objects to display
+const ObjectDetection = ({ videoRef, setDetections, detections}) => {
     const modelRef = useRef(null);                     // stores AI model
     const detectRef = useRef(null);                    // holds animation frame to control starting and stopping detection
 
@@ -53,7 +52,7 @@ const ObjectDetection = ( {videoRef}) => {
                 <ul>
                     {detections.map((obj, index) => (
                         <li key={index}>
-                            {obj.class} - {Math.round(obj.score*100)} % confidence
+                            {obj.class}
                         </li>
                     ))}
                 </ul>
