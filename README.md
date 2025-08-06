@@ -25,7 +25,7 @@ Detected objects are spoken aloud with SpeechSynthesisUtterance. Only new object
 ##  Getting Started
 ###  Prerequisites
 
-- Node.js (v18+ recommended)
+- Node.js
 - npm 
 
 ###  Installation
@@ -35,13 +35,14 @@ Detected objects are spoken aloud with SpeechSynthesisUtterance. Only new object
    cd blind-navigation
 
 2. **Install Dependencies**
+    ```bash
    npm install
 
-3. Run
+4. Run
+   ```bash
    npm start
 
 ## Future Improvements
-
 -  YOLOv8 backend via Flask for higher accuracy
 -  **Gesture Controls**
   - Use hand gestures to trigger commands (e.g. repeat last spoken objects, pause voice, navigate interface)
