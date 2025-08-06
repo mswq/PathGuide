@@ -7,10 +7,10 @@ import VoiceFeedback from './components/voice_feedback';
 function App() {
   const [detections, setDetections] = useState([]);
   return (
-    <div>
+    <div className="container">
       <h1> Blind Navigation Website</h1>
       <WebcamComponent setDetections={setDetections} detections={detections}/> 
-      <GestureControls />
+      {/* <GestureControls /> */}
       <VoiceFeedback detections={detections} />
     </div>
   );
